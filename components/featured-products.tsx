@@ -11,7 +11,7 @@ const products = [
     name: "Серьги Nebula",
     price: 3200,
     category: "Бисер",
-    image: "/images/beaded.jpg",
+    image: "https://picsum.photos/seed/accents-p1/800/1000",
     isNew: true,
   },
   {
@@ -19,7 +19,7 @@ const products = [
     name: "Кольцо Orbit",
     price: 4800,
     category: "Камни",
-    image: "/images/stones.jpg",
+    image: "https://picsum.photos/seed/accents-p2/800/1000",
     isNew: false,
   },
   {
@@ -27,7 +27,7 @@ const products = [
     name: "Браслет Helix",
     price: 2900,
     category: "Металл",
-    image: "/images/metal.jpg",
+    image: "https://picsum.photos/seed/accents-p3/800/1000",
     isNew: true,
   },
   {
@@ -35,7 +35,7 @@ const products = [
     name: "Чокер Void",
     price: 5500,
     category: "Бисер",
-    image: "/images/beaded.jpg",
+    image: "https://picsum.photos/seed/accents-p4/800/1000",
     isNew: false,
   },
   {
@@ -43,7 +43,7 @@ const products = [
     name: "Подвеска Luna",
     price: 3800,
     category: "Камни",
-    image: "/images/stones.jpg",
+    image: "https://picsum.photos/seed/accents-p5/800/1000",
     isNew: true,
   },
   {
@@ -51,7 +51,7 @@ const products = [
     name: "Кафф Echo",
     price: 2400,
     category: "Металл",
-    image: "/images/metal.jpg",
+    image: "https://picsum.photos/seed/accents-p6/800/1000",
     isNew: false,
   },
 ]

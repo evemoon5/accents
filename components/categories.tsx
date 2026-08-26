@@ -12,7 +12,7 @@ const categories = [
     subtitle: "Seed beads",
     description: "Чешский и японский бисер в авторских плетениях",
     count: 24,
-    image: "/images/beaded.jpg",
+    image: "https://picsum.photos/seed/accents-beads/1200/800",
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const categories = [
     subtitle: "Natural stones",
     description: "Натуральные минералы и полудрагоценные камни",
     count: 18,
-    image: "/images/stones.jpg",
+    image: "https://picsum.photos/seed/accents-stones/1200/800",
   },
   {
     id: 3,
@@ -28,7 +28,7 @@ const categories = [
     subtitle: "Metal craft",
     description: "Латунь, серебро и медь в минималистичных формах",
     count: 12,
-    image: "/images/metal.jpg",
+    image: "https://picsum.photos/seed/accents-metal/1200/800",
   },
 ]
 

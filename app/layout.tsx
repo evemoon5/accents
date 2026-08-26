@@ -25,7 +25,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'BEADS | Кастомные украшения',
+  title: 'ACCENTS | Кастомные украшения',
   description: 'Украшения, которые носят смыслы. Бисер, камни, металл — ручная работа.',
   generator: 'v0.app',
   icons: {

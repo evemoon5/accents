@@ -110,10 +110,10 @@ export function Contact() {
                     Email
                   </p>
                   <a 
-                    href="mailto:beadsbeadsbeads@gmail.com"
+                    href="mailto:accents@gmail.com"
                     className="text-2xl md:text-3xl font-medium hover:text-primary transition-colors"
                   >
-                    beadsbeadsbeads@gmail.com
+                    accents@gmail.com
                   </a>
                 </div>
 
@@ -125,7 +125,7 @@ export function Contact() {
                     href="#"
                     className="text-2xl md:text-3xl font-medium hover:text-primary transition-colors"
                   >
-                    @beadsbeadsbeads
+                    @accents
                   </a>
                 </div>
 

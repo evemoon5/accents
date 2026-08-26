@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
+import { Logo } from "@/components/logo"
 
 const footerLinks = {
   shop: [
@@ -33,9 +34,7 @@ export function Footer() {
             {/* Brand column */}
             <div className="lg:col-span-1">
               <Link href="/" className="inline-block mb-6">
-                <span className="text-2xl font-bold tracking-[0.3em] uppercase">
-                  BEADS
-                </span>
+                <Logo className="text-2xl font-bold tracking-[0.3em]" />
               </Link>
               <p className="text-muted-foreground text-sm max-w-xs">
                 Украшения ручной работы для тех, кто ценит индивидуальность и смыслы.
@@ -107,7 +106,7 @@ export function Footer() {
       <div className="border-t border-border px-6 md:px-12 py-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} BEADS. Все права защищены.
+            © {new Date().getFullYear()} ACCENTS. Все права защищены.
           </p>
           <div className="flex gap-6 text-sm text-muted-foreground">
             <Link href="#" className="hover:text-foreground transition-colors">
@@ -123,8 +122,8 @@ export function Footer() {
       {/* Giant text */}
       <div className="overflow-hidden border-t border-border">
         <div className="px-6 md:px-12 py-8">
-          <p className="text-[15vw] font-bold uppercase leading-none text-muted/20 select-none text-center">
-            BEADS
+          <p className="text-[15vw] font-bold leading-none text-muted opacity-20 select-none text-center">
+            <Logo />
           </p>
         </div>
       </div>

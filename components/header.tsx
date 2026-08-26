@@ -4,6 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X, ShoppingBag, ArrowUpRight } from "lucide-react"
+import { Logo } from "@/components/logo"
 
 const navItems = [
   { label: "Каталог", href: "#catalog" },
@@ -22,9 +23,7 @@ export function Header() {
         <div className="flex items-center justify-between px-6 py-6 md:px-12">
           {/* Logo */}
           <Link href="/" className="group">
-            <span className="text-xl font-bold tracking-[0.3em] text-white uppercase">
-              BEADS
-            </span>
+            <Logo className="text-xl font-bold tracking-[0.3em] text-white" />
           </Link>
 
           {/* Desktop Nav */}
@@ -115,7 +114,7 @@ export function Header() {
               >
                 <div>
                   <p>Москва</p>
-                  <p>beadsbeadsbeads@gmail.com</p>
+                  <p>accents@gmail.com</p>
                 </div>
                 <div className="flex gap-6">
                   <Link href="#" className="hover:text-primary-foreground transition-colors">Instagram</Link>

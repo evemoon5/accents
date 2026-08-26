@@ -112,6 +112,18 @@ html {
   z-index: 9999;
 }
 
+/* Акцентная палочка над первой буквой логотипа (имитация "ударения").
+   Все размеры в em — подстраиваются под размер шрифта родителя. */
+.accent-mark {
+  top: -0.55em;
+  left: 0.05em;
+  width: 0.32em;
+  height: 0.1em;
+  transform: rotate(-35deg);
+  transform-origin: bottom left;
+  border-radius: 1px;
+}
+
 /* Glitch text effect */
 @keyframes glitch {
   0%, 100% { transform: translate(0); }
