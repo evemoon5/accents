@@ -115,10 +115,10 @@ html {
 /* Акцентная палочка над первой буквой логотипа (имитация "ударения").
    Все размеры в em — подстраиваются под размер шрифта родителя. */
 .accent-mark {
-  top: -0.55em;
-  left: 0.05em;
-  width: 0.32em;
-  height: 0.1em;
+  top: -0.62em;
+  left: 0.04em;
+  width: 0.4em;
+  height: 0.14em;
   transform: rotate(-35deg);
   transform-origin: bottom left;
   border-radius: 1px;

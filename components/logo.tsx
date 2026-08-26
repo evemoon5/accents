@@ -15,7 +15,7 @@ export function Logo({ className = "" }: { className?: string }) {
     <span className={`relative inline-block whitespace-nowrap ${className}`}>
       <span
         aria-hidden="true"
-        className="accent-mark absolute bg-primary"
+        className="accent-mark absolute bg-current"
       />
       ACCENTS
     </span>
