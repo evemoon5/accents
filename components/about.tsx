@@ -47,7 +47,7 @@ export function About() {
                 transition={{ delay: 0.1 }}
                 className="text-5xl md:text-6xl lg:text-7xl font-bold uppercase mt-4 mb-8"
               >
-                Мы —&nbsp;<Logo />
+                Мы&nbsp;—&nbsp;<Logo />
               </motion.h2>
 
               <motion.div
