@@ -1,0 +1,46 @@
+# CI — автоматическая проверка кода при каждом пуше и pull request.
+#
+# Что это значит на практике: как только ты (или кто-то ещё)
+# отправляет изменения в GitHub, робот сам скачивает проект и
+# прогоняет 4 проверки по очереди. Если хоть одна упадёт —
+# рядом с коммитом в GitHub появится красный крестик, и будет
+# видно, что именно сломалось, до того как это попадёт на сайт.
+#
+# Если всё зелёное — можно спокойно продолжать работу или деплоить.
+
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  check:
+    name: Проверка кода
+    runs-on: ubuntu-latest
+    steps:
+      - name: Скачать код репозитория
+        uses: actions/checkout@v4
+
+      - name: Установить Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: "npm"
+
+      - name: Установить зависимости
+        run: npm ci
+
+      - name: Проверка типов TypeScript
+        run: npm run typecheck
+
+      - name: Линтер (поиск явных ошибок в коде)
+        run: npm run lint
+
+      - name: Тесты
+        run: npm run test
+
+      - name: Сборка проекта (как перед деплоем)
+        run: npm run build
