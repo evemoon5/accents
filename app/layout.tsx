@@ -1,32 +1,27 @@
 import type { Metadata, Viewport } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
-import { Space_Grotesk } from 'next/font/google'
+import { Nunito, Nunito_Sans } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const geist = Geist({ 
-  subsets: ["latin"],
-  variable: '--font-geist'
+const nunito = Nunito({
+  subsets: ["latin", "cyrillic"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: '--font-nunito'
 })
 
-const geistMono = Geist_Mono({ 
-  subsets: ["latin"],
-  variable: '--font-geist-mono'
-})
-
-const spaceGrotesk = Space_Grotesk({ 
-  subsets: ["latin"],
+const nunitoSans = Nunito_Sans({
+  subsets: ["latin", "cyrillic"],
   weight: ["300", "400", "500", "600", "700"],
-  variable: '--font-space'
+  variable: '--font-nunito-sans'
 })
 
 export const viewport: Viewport = {
-  themeColor: '#0d0d14',
+  themeColor: '#f6f1e7',
 }
 
 export const metadata: Metadata = {
-  title: 'ACCENTS | Кастомные украшения',
-  description: 'Украшения, которые носят смыслы. Бисер, камни, металл — ручная работа.',
+  title: 'Accents | Украшения ручной работы из натуральных камней',
+  description: 'Украшения из натурального камня — нефрит, агат, кварц, перламутр — с элементами металла и декоративных бусин. Ручная работа на заказ.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -53,7 +48,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="ru" className={`${geist.variable} ${geistMono.variable} ${spaceGrotesk.variable} bg-background`}>
+    <html lang="ru" className={`${nunito.variable} ${nunitoSans.variable} bg-background`}>
       <body className="font-sans antialiased overflow-x-hidden">
         <div className="noise" />
         {children}

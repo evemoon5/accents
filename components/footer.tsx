@@ -6,9 +6,9 @@ import { Logo } from "@/components/logo"
 
 const footerLinks = {
   shop: [
-    { label: "Бисер", href: "#" },
     { label: "Камни", href: "#" },
     { label: "Металл", href: "#" },
+    { label: "Декоративные бусины", href: "#" },
     { label: "Новинки", href: "#" },
   ],
   info: [
@@ -37,7 +37,7 @@ export function Footer() {
                 <Logo className="text-2xl font-bold tracking-[0.3em]" />
               </Link>
               <p className="text-muted-foreground text-sm max-w-xs">
-                Украшения ручной работы для тех, кто ценит индивидуальность и смыслы.
+                Украшения ручной работы из крупного натурального камня — для тех, кто ценит индивидуальность и знает цену настоящему.
               </p>
             </div>
 

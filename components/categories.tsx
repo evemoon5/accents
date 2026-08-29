@@ -8,27 +8,27 @@ import Image from "next/image"
 const categories = [
   {
     id: 1,
-    title: "Бисер",
-    subtitle: "Seed beads",
-    description: "Чешский и японский бисер в авторских плетениях",
-    count: 24,
-    image: "https://picsum.photos/seed/accents-beads/1200/800",
-  },
-  {
-    id: 2,
     title: "Камни",
     subtitle: "Natural stones",
-    description: "Натуральные минералы и полудрагоценные камни",
+    description: "Нефрит, агат, кварц, перламутр и другие камни от 8 мм — заметные и настоящие",
     count: 18,
     image: "https://picsum.photos/seed/accents-stones/1200/800",
   },
   {
-    id: 3,
+    id: 2,
     title: "Металл",
     subtitle: "Metal craft",
-    description: "Латунь, серебро и медь в минималистичных формах",
+    description: "Бижутерный сплав и гематит в минималистичных формах",
     count: 12,
     image: "https://picsum.photos/seed/accents-metal/1200/800",
+  },
+  {
+    id: 3,
+    title: "Декоративные бусины",
+    subtitle: "Decorative accents",
+    description: "Немного цвета и лёгкости там, где камню нужен акцент",
+    count: 10,
+    image: "https://picsum.photos/seed/accents-beads/1200/800",
   },
 ]
 

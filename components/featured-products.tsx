@@ -8,9 +8,9 @@ import Image from "next/image"
 const products = [
   {
     id: 1,
-    name: "Серьги Nebula",
+    name: "Браслет Джейд",
     price: 3200,
-    category: "Бисер",
+    category: "Камни",
     image: "https://picsum.photos/seed/accents-p1/800/1000",
     isNew: true,
   },
@@ -32,9 +32,9 @@ const products = [
   },
   {
     id: 4,
-    name: "Чокер Void",
+    name: "Чокер Агат",
     price: 5500,
-    category: "Бисер",
+    category: "Камни",
     image: "https://picsum.photos/seed/accents-p4/800/1000",
     isNew: false,
   },
@@ -90,7 +90,7 @@ export function FeaturedProducts() {
             transition={{ delay: 0.2 }}
             className="flex gap-4"
           >
-            {["Все", "Бисер", "Камни", "Металл"].map((filter, i) => (
+            {["Все", "Камни", "Металл", "Декоративные бусины"].map((filter, i) => (
               <button
                 key={filter}
                 className={`px-4 py-2 text-sm uppercase tracking-widest border transition-all ${

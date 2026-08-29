@@ -75,8 +75,9 @@ export function Hero() {
             transition={{ delay: 0.8 }}
             className="mt-8 text-muted-foreground max-w-md text-lg"
           >
-            Каждое украшение — история. Бисер, камни, металл, 
-            переплетённые в уникальные формы.
+            В основе каждого украшения — крупный натуральный камень: нефрит, 
+            агат, кварц, перламутр. Мы знаем, из чего собираем красоту, 
+            и с удовольствием расскажем вам об этом.
           </motion.p>
         </div>
 
@@ -104,7 +105,7 @@ export function Hero() {
         <div className="animate-marquee flex whitespace-nowrap">
           {[...Array(4)].map((_, i) => (
             <span key={i} className="text-sm uppercase tracking-[0.3em] text-muted-foreground mx-8">
-              Бисер — Камни — Металл — Бижутерия — Ручная работа — Уникальный дизайн — 
+              Натуральные камни — Металл — Декоративные бусины — Ручная работа — Проверенные материалы — 
             </span>
           ))}
         </div>
