@@ -20,9 +20,9 @@ export function Hero() {
       {/* Background with grain */}
       <div className="absolute inset-0 bg-background" />
       
-      {/* Animated gradient blob */}
+      {/* Animated gradient blob - warm matte glow, echoing the old dark-theme effect */}
       <motion.div 
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/20 blur-[150px]"
+        className="ambient-glow absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px]"
         animate={{
           scale: [1, 1.2, 1],
           rotate: [0, 90, 0],
