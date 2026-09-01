@@ -129,7 +129,7 @@ body {
   border-radius: 9999px;
   pointer-events: none;
   filter: blur(70px);
-  background: radial-gradient(circle, rgba(212, 174, 110, 0.75) 0%, rgba(212, 174, 110, 0.35) 45%, transparent 75%);
+  background: radial-gradient(circle, rgba(139, 154, 116, 0.75) 0%, rgba(139, 154, 116, 0.35) 45%, transparent 75%);
 }
 
 /* Glitch text effect */
