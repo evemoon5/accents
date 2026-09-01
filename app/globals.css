@@ -123,13 +123,20 @@ body {
   z-index: 9999;
 }
 
-/* Warm ambient glow - the "matte glow" effect, re-tuned for the cozy palette */
-.ambient-glow {
-  position: absolute;
-  border-radius: 9999px;
-  pointer-events: none;
-  filter: blur(55px);
-  background: radial-gradient(circle, rgba(240, 245, 228, 0.95) 0%, rgba(180, 195, 155, 0.6) 35%, rgba(122, 135, 104, 0.25) 60%, transparent 80%);
+/* Soft leaf shadow - mimics dappled light falling through a plant, reads naturally on a light background */
+.leaf-shadow {
+  filter: blur(3px);
+  opacity: 0.16;
+}
+
+.leaf-shadow path,
+.leaf-shadow line {
+  fill: #3d3a2f;
+  stroke: #3d3a2f;
+}
+
+.leaf-shadow line {
+  fill: none;
 }
 
 /* Glitch text effect */

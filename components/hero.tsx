@@ -20,19 +20,21 @@ export function Hero() {
       {/* Background with grain */}
       <div className="absolute inset-0 bg-background" />
       
-      {/* Animated gradient blob - warm matte glow, echoing the old dark-theme effect */}
-      <motion.div 
-        className="ambient-glow absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px]"
-        animate={{
-          scale: [1, 1.2, 1],
-          rotate: [0, 90, 0],
-        }}
-        transition={{
-          duration: 20,
-          repeat: Infinity,
-          ease: "linear"
-        }}
-      />
+      {/* Soft leaf-shadow motif, as if light falls through a plant */}
+      <motion.svg
+        className="leaf-shadow absolute top-[-5%] right-[5%] w-[520px] h-[720px] pointer-events-none"
+        viewBox="0 0 400 600"
+        animate={{ rotate: [0, 2, 0], x: [0, 12, 0] }}
+        transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <g>
+          <path d="M200 40 C 160 140, 140 260, 200 400 C 260 260, 240 140, 200 40 Z" />
+          <path d="M40 220 C 120 200, 200 220, 260 300 C 180 320, 90 300, 40 220 Z" />
+          <path d="M360 300 C 280 300, 210 340, 190 420 C 270 420, 340 380, 360 300 Z" />
+          <path d="M120 420 C 170 400, 220 420, 250 480 C 190 500, 140 480, 120 420 Z" />
+          <line x1="200" y1="40" x2="200" y2="480" strokeWidth="6" />
+        </g>
+      </motion.svg>
 
       {/* Main content */}
       <motion.div 
