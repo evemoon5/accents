@@ -4,25 +4,25 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Warm cozy theme: sage, olive, beige */
-  --background: #f6f1e7;
+  /* Warm cozy theme: sage, olive, buttery cream */
+  --background: #f7edd8;
   --foreground: #3d3a2f;
-  --card: #efe8d8;
+  --card: #f0e2c4;
   --card-foreground: #3d3a2f;
-  --popover: #f6f1e7;
+  --popover: #f7edd8;
   --popover-foreground: #3d3a2f;
   --primary: #7a8768;
-  --primary-foreground: #f6f1e7;
-  --secondary: #e6ddc8;
+  --primary-foreground: #f7edd8;
+  --secondary: #ecdcb4;
   --secondary-foreground: #4a4636;
-  --muted: #e3dac4;
+  --muted: #e8d8ac;
   --muted-foreground: #7c7460;
   --accent: #a68a5b;
-  --accent-foreground: #f6f1e7;
+  --accent-foreground: #f7edd8;
   --destructive: #b3574a;
-  --destructive-foreground: #f6f1e7;
-  --border: #ddd2b6;
-  --input: #e6ddc8;
+  --destructive-foreground: #f7edd8;
+  --border: #ddc998;
+  --input: #ecdcb4;
   --ring: #7a8768;
   --chart-1: #7a8768;
   --chart-2: #a68a5b;
@@ -30,13 +30,13 @@
   --chart-4: #c2a878;
   --chart-5: #6b7a5a;
   --radius: 1.25rem;
-  --sidebar: #efe8d8;
+  --sidebar: #f0e2c4;
   --sidebar-foreground: #3d3a2f;
   --sidebar-primary: #7a8768;
-  --sidebar-primary-foreground: #f6f1e7;
-  --sidebar-accent: #e6ddc8;
+  --sidebar-primary-foreground: #f7edd8;
+  --sidebar-accent: #ecdcb4;
   --sidebar-accent-foreground: #4a4636;
-  --sidebar-border: #ddd2b6;
+  --sidebar-border: #ddc998;
   --sidebar-ring: #7a8768;
 }
 
@@ -109,7 +109,7 @@ body {
 /* Custom selection color - sage */
 ::selection {
   background-color: #7a8768;
-  color: #f6f1e7;
+  color: #f7edd8;
 }
 
 /* Paper grain overlay - gives the "shershavost" (rough paper) feel */
@@ -128,8 +128,8 @@ body {
   position: absolute;
   border-radius: 9999px;
   pointer-events: none;
-  filter: blur(80px);
-  background: radial-gradient(circle, rgba(166, 138, 91, 0.65) 0%, rgba(122, 135, 104, 0.45) 40%, transparent 72%);
+  filter: blur(70px);
+  background: radial-gradient(circle, rgba(166, 138, 91, 0.85) 0%, rgba(122, 135, 104, 0.6) 42%, transparent 74%);
 }
 
 /* Glitch text effect */
@@ -166,7 +166,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f6f1e7;
+  background: #f7edd8;
 }
 
 ::-webkit-scrollbar-thumb {
