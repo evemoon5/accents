@@ -20,35 +20,44 @@ export function Hero() {
       {/* Background with grain */}
       <div className="absolute inset-0 bg-background" />
       
-      {/* Soft leaf-shadow motif, as if light falls through a plant — adapted from a real shadow reference */}
+      {/* Soft leaf-shadow motif, closely tracing a real shadow reference, rotated to sit on the diagonal */}
       <motion.svg
-        className="leaf-shadow absolute top-[-8%] right-[2%] w-[560px] h-[760px] pointer-events-none"
-        viewBox="0 0 400 560"
-        animate={{ rotate: [0, 1.5, 0], x: [0, 10, 0] }}
+        className="leaf-shadow absolute top-[-6%] right-[3%] w-[480px] h-[820px] pointer-events-none"
+        viewBox="0 0 400 700"
+        animate={{ rotate: [38, 39.5, 38], x: [0, 8, 0] }}
         transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
+        style={{ transformOrigin: "50% 50%" }}
       >
-        <g>
-          <path d="M320 540 C 290 470, 260 420, 220 370 C 180 320, 140 290, 100 240 C 70 200, 55 160, 45 110"
-                stroke="#3d3a2f" strokeWidth="6" fill="none" strokeLinecap="round" />
-          <path d="M220 370 C 250 350, 275 340, 310 320"
-                stroke="#3d3a2f" strokeWidth="4" fill="none" strokeLinecap="round" />
-          <path d="M160 320 C 130 310, 105 315, 75 300"
-                stroke="#3d3a2f" strokeWidth="4" fill="none" strokeLinecap="round" />
-          <path d="M100 240 C 125 225, 150 218, 180 200"
-                stroke="#3d3a2f" strokeWidth="3.5" fill="none" strokeLinecap="round" />
+        <defs>
+          <path id="leaf-lance" d="M0,-70 C14,-50 14,50 0,70 C-14,50 -14,-50 0,-70 Z" />
+          <path id="leaf-sliver" d="M0,-60 C6,-40 6,40 0,60 C-6,40 -6,-40 0,-60 Z" />
+        </defs>
+        <g transform="rotate(38 200 350)">
+          {/* main stem */}
+          <path d="M200 660 C 198 560, 202 460, 198 360 C 196 300, 200 230, 205 150 C 208 110, 215 80, 225 50"
+                stroke="#3d3a2f" strokeWidth="5" fill="none" strokeLinecap="round" />
 
-          <ellipse cx="45" cy="110" rx="24" ry="38" fill="#3d3a2f" transform="rotate(-25 45 110)" />
-          <ellipse cx="85" cy="150" rx="18" ry="30" fill="#3d3a2f" transform="rotate(10 85 150)" />
-          <ellipse cx="180" cy="200" rx="20" ry="32" fill="#3d3a2f" transform="rotate(-30 180 200)" />
-          <ellipse cx="140" cy="230" rx="16" ry="26" fill="#3d3a2f" transform="rotate(20 140 230)" />
-          <ellipse cx="75" cy="300" rx="19" ry="30" fill="#3d3a2f" transform="rotate(-45 75 300)" />
-          <ellipse cx="160" cy="320" rx="17" ry="27" fill="#3d3a2f" transform="rotate(15 160 320)" />
-          <ellipse cx="310" cy="320" rx="22" ry="34" fill="#3d3a2f" transform="rotate(35 310 320)" />
-          <ellipse cx="260" cy="350" rx="17" ry="27" fill="#3d3a2f" transform="rotate(-10 260 350)" />
-          <ellipse cx="220" cy="370" rx="20" ry="32" fill="#3d3a2f" transform="rotate(50 220 370)" />
-          <ellipse cx="280" cy="420" rx="19" ry="30" fill="#3d3a2f" transform="rotate(-20 280 420)" />
-          <ellipse cx="220" cy="440" rx="16" ry="26" fill="#3d3a2f" transform="rotate(30 220 440)" />
-          <ellipse cx="320" cy="480" rx="21" ry="33" fill="#3d3a2f" transform="rotate(-40 320 480)" />
+          {/* top cluster: three overlapping leaves forming a rounded crown */}
+          <use href="#leaf-lance" transform="translate(222 45) rotate(-8) scale(1.15)" />
+          <use href="#leaf-lance" transform="translate(268 95) rotate(38) scale(1.0)" />
+          <use href="#leaf-sliver" transform="translate(245 110) rotate(8) scale(0.7)" />
+          <use href="#leaf-sliver" transform="translate(230 130) rotate(-15) scale(0.55)" />
+
+          {/* upper-mid pair */}
+          <use href="#leaf-lance" transform="translate(118 205) rotate(-45) scale(1.35)" />
+          <use href="#leaf-lance" transform="translate(270 255) rotate(35) scale(1.2)" />
+
+          {/* mid leaf, longer */}
+          <use href="#leaf-lance" transform="translate(150 330) rotate(-30) scale(1.5)" />
+
+          {/* lower thin slivers */}
+          <use href="#leaf-sliver" transform="translate(95 415) rotate(-58) scale(1.1)" />
+          <use href="#leaf-sliver" transform="translate(70 500) rotate(-65) scale(1.0)" />
+          <use href="#leaf-lance" transform="translate(285 420) rotate(48) scale(1.05)" />
+
+          {/* bottom heart-shaped overlapping pair */}
+          <use href="#leaf-lance" transform="translate(180 545) rotate(20) scale(1.3)" />
+          <use href="#leaf-lance" transform="translate(228 555) rotate(-18) scale(1.25)" />
         </g>
       </motion.svg>
 
