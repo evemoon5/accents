@@ -122,7 +122,7 @@ export function Footer() {
       {/* Giant text */}
       <div className="overflow-hidden border-t border-border">
         <div className="px-6 md:px-12 py-8">
-          <p className="text-[15vw] font-bold leading-none text-muted opacity-20 select-none text-center">
+          <p className="text-[15vw] font-bold leading-none text-foreground opacity-[0.1] select-none text-center">
             <Logo />
           </p>
         </div>
