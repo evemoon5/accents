@@ -24,13 +24,13 @@ export function Hero() {
       <motion.svg
         className="leaf-shadow absolute top-[-6%] right-[3%] w-[480px] h-[820px] pointer-events-none"
         viewBox="0 0 400 700"
-        animate={{ rotate: [38, 39.5, 38], x: [0, 8, 0] }}
+        animate={{ rotate: [0, 1.2, 0], x: [0, 8, 0] }}
         transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
         style={{ transformOrigin: "50% 50%" }}
       >
         <defs>
-          <path id="leaf-lance" d="M0,-70 C14,-50 14,50 0,70 C-14,50 -14,-50 0,-70 Z" />
-          <path id="leaf-sliver" d="M0,-60 C6,-40 6,40 0,60 C-6,40 -6,-40 0,-60 Z" />
+          <path id="leaf-lance" d="M0,-68 C22,-62 26,-15 24,20 C22,50 12,68 0,72 C-12,68 -22,50 -24,20 C-26,-15 -22,-62 0,-68 Z" />
+          <path id="leaf-sliver" d="M0,-58 C10,-53 12,-12 11,18 C10,42 5,58 0,62 C-5,58 -10,42 -11,18 C-12,-12 -10,-53 0,-58 Z" />
         </defs>
         <g transform="rotate(38 200 350)">
           {/* main stem */}
