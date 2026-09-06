@@ -45,7 +45,7 @@ export function Categories() {
               viewport={{ once: true }}
               className="text-primary text-sm tracking-[0.3em] uppercase"
             >
-              01 / Общее
+              01 / LOOKBOOK Мастерская
             </motion.span>
             <motion.h2
               initial={{ opacity: 0, y: 40 }}
