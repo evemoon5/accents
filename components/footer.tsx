@@ -6,10 +6,10 @@ import { Logo } from "@/components/logo"
 
 const footerLinks = {
   shop: [
-    { label: "Камни", href: "#" },
-    { label: "Металл", href: "#" },
-    { label: "Декоративные бусины", href: "#" },
-    { label: "Новинки", href: "#" },
+    { label: "Колье", href: "#catalog" },
+    { label: "Браслеты", href: "#catalog" },
+    { label: "Обвесы", href: "#catalog" },
+    { label: "Лукбук", href: "#lookbook" },
   ],
   info: [
     { label: "О нас", href: "#about" },

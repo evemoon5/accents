@@ -8,33 +8,33 @@ import Image from "next/image"
 const categories = [
   {
     id: 1,
-    title: "Камни",
-    subtitle: "Natural stones",
-    description: "Нефрит, агат, кварц, перламутр и другие камни от 8 мм — заметные и настоящие",
-    count: 18,
+    title: "Тизер",
+    subtitle: "Behind the scenes",
+    description: "Украшения в процессе: инструменты, руки, полусобранные вещи — то, что обычно не видно",
+    tag: "В процессе",
     image: "https://picsum.photos/seed/accents-stones/1200/800",
   },
   {
     id: 2,
-    title: "Металл",
-    subtitle: "Metal craft",
-    description: "Бижутерный сплав и гематит в минималистичных формах",
-    count: 12,
+    title: "Дроп",
+    subtitle: "На вид съедобное",
+    description: "Новая история украшений, которая скоро выйдет на свет",
+    tag: "Скоро",
     image: "https://picsum.photos/seed/accents-metal/1200/800",
   },
   {
     id: 3,
-    title: "Декоративные бусины",
-    subtitle: "Decorative accents",
-    description: "Немного цвета и лёгкости там, где камню нужен акцент",
-    count: 10,
+    title: "Showreel",
+    subtitle: "Aesthetic feed",
+    description: "Эстетика мастерской без слов: то, как мы видим свои украшения",
+    tag: "Смотреть",
     image: "https://picsum.photos/seed/accents-beads/1200/800",
   },
 ]
 
 export function Categories() {
   return (
-    <section id="catalog" className="relative py-32 md:py-48">
+    <section id="lookbook" className="relative py-32 md:py-48">
       {/* Section header - asymmetric */}
       <div className="px-6 md:px-12 mb-16 md:mb-24">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
@@ -45,7 +45,7 @@ export function Categories() {
               viewport={{ once: true }}
               className="text-primary text-sm tracking-[0.3em] uppercase"
             >
-              01 / Каталог
+              01 / Общее
             </motion.span>
             <motion.h2
               initial={{ opacity: 0, y: 40 }}
@@ -54,7 +54,7 @@ export function Categories() {
               transition={{ delay: 0.1 }}
               className="text-5xl md:text-7xl lg:text-8xl font-bold uppercase mt-4"
             >
-              Категории
+              Лукбук
             </motion.h2>
           </div>
           <motion.p
@@ -64,7 +64,7 @@ export function Categories() {
             transition={{ delay: 0.2 }}
             className="text-muted-foreground max-w-sm text-lg"
           >
-            Три направления, объединённые одной философией — создавать красоту из простых материалов.
+            Три взгляда на одну мастерскую: то, что рождается, то, что выходит новым, и то, как это живёт дальше.
           </motion.p>
         </div>
       </div>
@@ -113,7 +113,7 @@ export function Categories() {
                   {/* Bottom */}
                   <div>
                     <span className="text-primary text-xs tracking-widest uppercase">
-                      {category.count} изделий
+                      {category.tag}
                     </span>
                     <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold uppercase mt-2 group-hover:text-primary transition-colors">
                       {category.title}

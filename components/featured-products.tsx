@@ -10,15 +10,15 @@ const products = [
     id: 1,
     name: "Браслет Джейд",
     price: 3200,
-    category: "Камни",
+    category: "Браслеты",
     image: "https://picsum.photos/seed/accents-p1/800/1000",
     isNew: true,
   },
   {
     id: 2,
-    name: "Кольцо Orbit",
+    name: "Колье Orbit",
     price: 4800,
-    category: "Камни",
+    category: "Колье",
     image: "https://picsum.photos/seed/accents-p2/800/1000",
     isNew: false,
   },
@@ -26,41 +26,48 @@ const products = [
     id: 3,
     name: "Браслет Helix",
     price: 2900,
-    category: "Металл",
+    category: "Браслеты",
     image: "https://picsum.photos/seed/accents-p3/800/1000",
     isNew: true,
   },
   {
     id: 4,
-    name: "Чокер Агат",
+    name: "Колье Агат",
     price: 5500,
-    category: "Камни",
+    category: "Колье",
     image: "https://picsum.photos/seed/accents-p4/800/1000",
     isNew: false,
   },
   {
     id: 5,
-    name: "Подвеска Luna",
+    name: "Обвес Luna",
     price: 3800,
-    category: "Камни",
+    category: "Обвесы",
     image: "https://picsum.photos/seed/accents-p5/800/1000",
     isNew: true,
   },
   {
     id: 6,
-    name: "Кафф Echo",
+    name: "Обвес Echo",
     price: 2400,
-    category: "Металл",
+    category: "Обвесы",
     image: "https://picsum.photos/seed/accents-p6/800/1000",
     isNew: false,
   },
 ]
 
+const filters = ["Все", "Колье", "Браслеты", "Обвесы"]
+
 export function FeaturedProducts() {
   const [hoveredId, setHoveredId] = useState<number | null>(null)
+  const [activeFilter, setActiveFilter] = useState("Все")
+
+  const filteredProducts = activeFilter === "Все"
+    ? products
+    : products.filter((product) => product.category === activeFilter)
 
   return (
-    <section className="relative py-32 md:py-48 bg-card">
+    <section id="catalog" className="relative py-32 md:py-48 bg-card">
       {/* Section header */}
       <div className="px-6 md:px-12 mb-16 md:mb-24">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
@@ -71,7 +78,7 @@ export function FeaturedProducts() {
               viewport={{ once: true }}
               className="text-primary text-sm tracking-[0.3em] uppercase"
             >
-              02 / Избранное
+              02 / Каталог
             </motion.span>
             <motion.h2
               initial={{ opacity: 0, y: 40 }}
@@ -80,8 +87,17 @@ export function FeaturedProducts() {
               transition={{ delay: 0.1 }}
               className="text-5xl md:text-7xl lg:text-8xl font-bold uppercase mt-4"
             >
-              Новинки
+              Категории
             </motion.h2>
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.15 }}
+              className="text-muted-foreground max-w-sm text-lg mt-4"
+            >
+              Ни одно украшение не повторяется дважды — выбирайте то, что есть сейчас.
+            </motion.p>
           </div>
           <motion.div
             initial={{ opacity: 0 }}
@@ -90,11 +106,12 @@ export function FeaturedProducts() {
             transition={{ delay: 0.2 }}
             className="flex gap-4"
           >
-            {["Все", "Камни", "Металл", "Декоративные бусины"].map((filter, i) => (
+            {filters.map((filter) => (
               <button
                 key={filter}
+                onClick={() => setActiveFilter(filter)}
                 className={`px-4 py-2 text-sm uppercase tracking-widest border transition-all ${
-                  i === 0 
+                  filter === activeFilter
                     ? 'border-primary bg-primary text-primary-foreground' 
                     : 'border-border hover:border-primary hover:text-primary'
                 }`}
@@ -109,7 +126,7 @@ export function FeaturedProducts() {
       {/* Products grid */}
       <div className="px-6 md:px-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
-          {products.map((product, i) => (
+          {filteredProducts.map((product, i) => (
             <motion.article
               key={product.id}
               initial={{ opacity: 0, y: 40 }}
