@@ -45,7 +45,7 @@ export function Categories() {
               viewport={{ once: true }}
               className="text-primary text-sm tracking-[0.3em] uppercase"
             >
-              01 / LOOKBOOK Мастерская
+              01 / LOOKBOOK
             </motion.span>
             <motion.h2
               initial={{ opacity: 0, y: 40 }}
@@ -54,7 +54,7 @@ export function Categories() {
               transition={{ delay: 0.1 }}
               className="text-5xl md:text-7xl lg:text-8xl font-bold uppercase mt-4"
             >
-              Лукбук
+              Мастерская
             </motion.h2>
           </div>
           <motion.p

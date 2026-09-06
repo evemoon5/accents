@@ -7,8 +7,8 @@ import { Menu, X, ShoppingBag, ArrowUpRight } from "lucide-react"
 import { Logo } from "@/components/logo"
 
 const navItems = [
-  { label: "Каталог", href: "#catalog" },
   { label: "Lookbook", href: "#lookbook" },
+  { label: "Каталог", href: "#catalog" },
   { label: "О нас", href: "#about" },
   { label: "Процесс", href: "#process" },
   { label: "Контакт", href: "#contact" },
