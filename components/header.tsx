@@ -8,6 +8,7 @@ import { Logo } from "@/components/logo"
 
 const navItems = [
   { label: "Каталог", href: "#catalog" },
+  { label: "Лукбук", href: "#lookbook" },
   { label: "О нас", href: "#about" },
   { label: "Процесс", href: "#process" },
   { label: "Контакт", href: "#contact" },

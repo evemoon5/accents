@@ -12,8 +12,8 @@ export function Hero() {
     offset: ["start start", "end start"]
   })
 
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"])
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "18%"])
+  const opacity = useTransform(scrollYProgress, [0, 0.4], [1, 0])
 
   return (
     <section ref={containerRef} className="relative min-h-screen flex flex-col justify-between overflow-hidden">
@@ -128,7 +128,7 @@ export function Hero() {
       </motion.div>
 
       {/* Bottom marquee */}
-      <div className="relative z-10 border-t border-border py-4 overflow-hidden">
+      <div className="relative z-20 bg-background border-t border-border py-4 overflow-hidden">
         <div className="animate-marquee flex whitespace-nowrap">
           {[...Array(4)].map((_, i) => (
             <span key={i} className="text-sm uppercase tracking-[0.3em] text-muted-foreground mx-8">
