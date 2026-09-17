@@ -24,7 +24,7 @@ export function FeaturedProducts() {
 
   useEffect(() => {
     fetch("/api/products")
-      .then((res) => res.json())
+      .then((res) => res.json() as Promise<Product[]>)
       .then((data) => setProducts(data))
       .catch((err) => console.error("Не удалось загрузить товары:", err))
       .finally(() => setLoading(false))
