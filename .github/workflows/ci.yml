@@ -33,6 +33,9 @@ jobs:
       - name: Установить зависимости
         run: npm ci
 
+      - name: Сгенерировать типы Cloudflare (D1, R2 и т.д.)
+        run: npx wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts
+
       - name: Проверка типов TypeScript
         run: npm run typecheck
 

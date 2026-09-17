@@ -9,7 +9,7 @@ import nextConfig from "eslint-config-next"
 const eslintConfig = [
   ...nextConfig,
   {
-    ignores: [".next/**", "node_modules/**", "coverage/**", "components/ui/**", "hooks/use-mobile.ts"],
+    ignores: [".next/**", ".open-next/**", "node_modules/**", "coverage/**", "components/ui/**", "hooks/use-mobile.ts", "cloudflare-env.d.ts"],
   },
 ]
 

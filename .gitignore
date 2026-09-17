@@ -19,3 +19,8 @@ node_modules
 
 *.tsbuildinfo
 coverage/
+
+# Cloudflare build output & generated types
+.open-next/
+cloudflare-env.d.ts
+worker-configuration.d.ts
