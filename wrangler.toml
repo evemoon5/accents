@@ -1,0 +1,21 @@
+name = "accents"
+compatibility_date = "2026-09-08"
+#pages_build_output_dir = ".vercel/output/static"
+
+main = ".open-next/worker.js"
+
+[assets]
+directory = ".open-next/assets"
+binding = "ASSETS"
+
+[observability]
+enabled = true
+
+[[r2_buckets]]
+binding = "PHOTOS"
+bucket_name = "accents-photos"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "accents-db"
+database_id = "95fd17fb-f12e-4153-b7c7-9ec355190e7b"

@@ -1,66 +1,34 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { Plus, Heart } from "lucide-react"
 import Image from "next/image"
 
-const products = [
-  {
-    id: 1,
-    name: "Браслет Джейд",
-    price: 3200,
-    category: "Браслеты",
-    image: "https://picsum.photos/seed/accents-p1/800/1000",
-    isNew: true,
-  },
-  {
-    id: 2,
-    name: "Колье Orbit",
-    price: 4800,
-    category: "Колье",
-    image: "https://picsum.photos/seed/accents-p2/800/1000",
-    isNew: false,
-  },
-  {
-    id: 3,
-    name: "Браслет Helix",
-    price: 2900,
-    category: "Браслеты",
-    image: "https://picsum.photos/seed/accents-p3/800/1000",
-    isNew: true,
-  },
-  {
-    id: 4,
-    name: "Колье Агат",
-    price: 5500,
-    category: "Колье",
-    image: "https://picsum.photos/seed/accents-p4/800/1000",
-    isNew: false,
-  },
-  {
-    id: 5,
-    name: "Обвес Luna",
-    price: 3800,
-    category: "Обвесы",
-    image: "https://picsum.photos/seed/accents-p5/800/1000",
-    isNew: true,
-  },
-  {
-    id: 6,
-    name: "Обвес Echo",
-    price: 2400,
-    category: "Обвесы",
-    image: "https://picsum.photos/seed/accents-p6/800/1000",
-    isNew: false,
-  },
-]
+type Product = {
+  id: number
+  name: string
+  description: string | null
+  price: number
+  category: string
+  image: string | null
+}
 
 const filters = ["Все", "Колье", "Браслеты", "Обвесы"]
 
 export function FeaturedProducts() {
+  const [products, setProducts] = useState<Product[]>([])
+  const [loading, setLoading] = useState(true)
   const [hoveredId, setHoveredId] = useState<number | null>(null)
   const [activeFilter, setActiveFilter] = useState("Все")
+
+  useEffect(() => {
+    fetch("/api/products")
+      .then((res) => res.json())
+      .then((data) => setProducts(data))
+      .catch((err) => console.error("Не удалось загрузить товары:", err))
+      .finally(() => setLoading(false))
+  }, [])
 
   const filteredProducts = activeFilter === "Все"
     ? products
@@ -125,6 +93,12 @@ export function FeaturedProducts() {
 
       {/* Products grid */}
       <div className="px-6 md:px-12">
+        {loading && (
+          <p className="text-muted-foreground text-center py-12">Загружаем изделия…</p>
+        )}
+        {!loading && filteredProducts.length === 0 && (
+          <p className="text-muted-foreground text-center py-12">Пока здесь пусто — изделия скоро появятся.</p>
+        )}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
           {filteredProducts.map((product, i) => (
             <motion.article
@@ -139,20 +113,15 @@ export function FeaturedProducts() {
             >
               {/* Image container */}
               <div className="relative aspect-[3/4] bg-secondary mb-6 overflow-hidden">
-                <Image
-                  src={product.image}
-                  alt={product.name}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                
-                {/* New badge */}
-                {product.isNew && (
-                  <span className="absolute top-4 left-4 px-3 py-1 bg-primary text-primary-foreground text-xs uppercase tracking-widest">
-                    New
-                  </span>
+                {product.image && (
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
                 )}
-                
+
                 {/* Actions overlay */}
                 <motion.div 
                   initial={false}
@@ -183,8 +152,13 @@ export function FeaturedProducts() {
                   <h3 className="text-lg font-medium mt-1 group-hover:text-primary transition-colors">
                     {product.name}
                   </h3>
+                  {product.description && (
+                    <p className="text-sm text-muted-foreground mt-1 max-w-xs">
+                      {product.description}
+                    </p>
+                  )}
                 </div>
-                <span className="text-lg tabular-nums">
+                <span className="text-lg tabular-nums shrink-0 ml-4">
                   {product.price.toLocaleString('ru-RU')} ₽
                 </span>
               </div>
